@@ -7,12 +7,12 @@ error_log('Raw POST data: ' . $raw_post_data);
 // Log received POST data
 error_log('Received POST data: ' . print_r($_POST, true));
 
-$merchant_id         = isset($_POST['merchant_id']) ? $_POST['merchant_id'] : '';
+/*$merchant_id         = isset($_POST['merchant_id']) ? $_POST['merchant_id'] : '';
 $order_id            = isset($_POST['order_id']) ? $_POST['order_id'] : '';
 $payhere_amount      = isset($_POST['amount']) ? $_POST['amount'] : '';
 $payhere_currency    = isset($_POST['currency']) ? $_POST['currency'] : '';
 $status_code         = isset($_POST['status_code']) ? $_POST['status_code'] : '';
-$md5sig              = isset($_POST['md5sig']) ? $_POST['md5sig'] : '';
+$md5sig              = isset($_POST['md5sig']) ? $_POST['md5sig'] : '';*/
 
 /*$merchant_id         = isset($_POST['1225212']) ? $_POST['merchant_id'] : '';
 $order_id            = isset($_POST['ItemNo12346']) ? $_POST['order_id'] : '';
@@ -21,12 +21,12 @@ $payhere_currency    = isset($_POST['LKR']) ? $_POST['currency'] : '';
 $status_code         = isset($_POST['2']) ? $_POST['status_code'] : '';
 $md5sig              = isset($_POST['local_md5sig']) ? $_POST['md5sig'] : '';*/
 
-/*$merchant_id         = $_POST['merchant_id'];
+$merchant_id         = $_POST['merchant_id'];
 $order_id            = $_POST['order_id'];
 $payhere_amount      = $_POST['payhere_amount'];
 $payhere_currency    = $_POST['payhere_currency'];
 $status_code         = $_POST['status_code'];
-$md5sig              = $_POST['md5sig'];*/
+$md5sig              = $_POST['md5sig'];
 
 /*$merchant_id         = $_POST['1225212'];
 $order_id            = $_POST['ItemNo12346'];
