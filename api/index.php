@@ -1,5 +1,6 @@
 <?php
 
+echo "Hello World!";
 // Log raw POST data
 $raw_post_data = file_get_contents("php://input");
 error_log('Raw POST data: ' . $raw_post_data);
