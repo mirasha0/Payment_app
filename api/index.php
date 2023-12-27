@@ -20,10 +20,15 @@ $local_md5sig = strtoupper(
     ) 
 );
        
-if (($local_md5sig === $md5sig) AND ($status_code == 2) ){
-        //TODO: Update your database as payment success
-        
-        
+if (empty($_POST)) {
+    error_log('No POST data received.');
+} elseif (($local_md5sig === $md5sig) AND ($status_code == '2')) {
+    error_log('Successful payment for order ID: ' . $order_id);
+    error_log('POST data received: ' . print_r($_POST, true));
+} else {
+    // Log an error or take appropriate action for failed validation
+    error_log('Payment validation failed for order ID: ' . $order_id);
+    error_log('POST data received: ' . print_r($_POST, true));
 }
 
 ?>
