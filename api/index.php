@@ -1,11 +1,11 @@
 <?php
 
-$merchant_id         = $_POST['merchant_id'];
-$order_id            = $_POST['order_id'];
-$payhere_amount      = $_POST['payhere_amount'];
-$payhere_currency    = $_POST['payhere_currency'];
-$status_code         = $_POST['status_code'];
-$md5sig              = $_POST['md5sig'];
+$merchant_id         = isset($_POST['1225212']) ? $_POST['merchant_id'] : '';
+$order_id            = isset($_POST['ItemNo12346']) ? $_POST['order_id'] : '';
+$payhere_amount      = isset($_POST['30.00']) ? $_POST['amount'] : '';
+$payhere_currency    = isset($_POST['LKR']) ? $_POST['currency'] : '';
+$status_code         = isset($_POST['2']) ? $_POST['status_code'] : '';
+$md5sig              = isset($_POST['local_md5sig']) ? $_POST['md5sig'] : '';
 
 $merchant_secret = 'MzE4MjcwNTIzMDI1OTkwNDkwMjExMDUyOTQ1ODQzMjk3MzQ0MDE5Mg=='; // Replace with your Merchant Secret
 
