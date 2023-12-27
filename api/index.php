@@ -1,4 +1,5 @@
 <?php
+echo "Hello World!";
 
 $merchant_id         = $_POST['merchant_id'];
 $order_id            = $_POST['order_id'];
@@ -22,6 +23,7 @@ $local_md5sig = strtoupper(
        
 if (($local_md5sig === $md5sig) AND ($status_code == 2) ){
         //TODO: Update your database as payment success
+        echo "Hello World!123";
         
 }
 
