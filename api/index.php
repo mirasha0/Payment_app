@@ -7,7 +7,7 @@ $payhere_currency    = $_POST['payhere_currency'];
 $status_code         = $_POST['status_code'];
 $md5sig              = $_POST['md5sig'];
 
-$merchant_secret = 'MjQ0MzY3NDU3NTM1Njg0MDA0NzQyNzU1ODQxOTY0NDEwNDcwMzAzMg=='; // Replace with your Merchant Secret
+$merchant_secret = 'MzE4MjcwNTIzMDI1OTkwNDkwMjExMDUyOTQ1ODQzMjk3MzQ0MDE5Mg=='; // Replace with your Merchant Secret
 
 $local_md5sig = strtoupper(
     md5(
@@ -23,7 +23,6 @@ $local_md5sig = strtoupper(
 if (($local_md5sig === $md5sig) AND ($status_code == 2) ){
         //TODO: Update your database as payment success
         
-echo "Hello World!";
 }
 
 ?>
