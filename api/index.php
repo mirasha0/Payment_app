@@ -21,7 +21,7 @@ $local_md5sig = strtoupper(
 );
        
 if (empty($_POST)) {
-    error_log('No POST data received.');
+    error_log('No POST data received...........');
 } elseif (($local_md5sig === $md5sig) AND ($status_code == '2')) {
     echo('Successful payment for order ID: ' . $order_id);
     echo('POST data received: ' . print_r($_POST, true));
@@ -29,6 +29,7 @@ if (empty($_POST)) {
     // Log an error or take appropriate action for failed validation
     echo('Payment validation failed for order ID: ' . $order_id);
     echo('POST data received: ' . print_r($_POST, true));
+
 }
 
 ?>
