@@ -19,6 +19,17 @@ $local_md5sig = strtoupper(
         strtoupper(md5($merchant_secret)) 
     ) 
 );
+
+$hash = strtoupper(
+    md5(
+        $merchant_id . 
+        $order_id . 
+        number_format($amount, 2, '.', '') . 
+        $currency .  
+        strtoupper(md5($merchant_secret)) 
+    ) 
+);
+echo("//////// $hash");
        
 if (empty($_POST)) {
     error_log('No POST data received.');
